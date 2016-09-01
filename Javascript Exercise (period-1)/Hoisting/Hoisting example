@@ -1,0 +1,22 @@
+Hoisting is examply when a var is hoisted to the top, when used internally in a function and then gives undefined value, because it has not yet been intialised. This can give problems and must be taken into consideration.
+
+example:
+
+var greeting = "hej"
+
+console.log(greeting);
+
+var sayHello = function(){
+   var greeting = "hello"
+   console.log(greeting);
+}
+
+sayHello();
+
+
+Output:
+
+hej
+
+undefined
+
