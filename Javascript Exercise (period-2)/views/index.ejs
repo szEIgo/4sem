@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+<h1>Welcome to Calculator App</h1>
+<form action="/calculate" method="post">
+
+<ul><li>Number1</li>
+    <li><input type="text" name="number1"></li>
+    <li>Number2</li>
+    <li><input type="text" name="number2"></li>
+    <li>Symbol:(+ - * /)</li>
+    <li><input type="text" name="symbol"></li>
+    <li><input type="submit" name="add" value="Calculate">
+
+    </li>
+    <ul>
+        <% for (var i = 0; i < calculations.length; i++) { %>
+        <li><%= calculations[i].desc %> </li>
+        <% } %>
+    </ul>
+</ul>
+</form>
+</body>
+</html>

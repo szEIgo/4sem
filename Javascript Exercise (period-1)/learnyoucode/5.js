@@ -1,15 +1,18 @@
 var fs = require("fs");
+var path = require("path");
+
 //fs is file system (a function based library)
-var filePath = "/Desktop"
+var folderDir = process.argv[2];
+var fileFormat = "." + process.argv[3];
 // the file path is defined to be the first argument
 
-fs.readdir(filePath,function(err,files) {
+fs.readdir(folderDir,function(err,files) {
     if (err) {
         console.log(err)
-    }
-    ;
-
-    var location = files.options.toString()
-
-    console.log(location);
+    };
+    files.forEach(function(file){
+        if(path.extname(file) === fileFormat){
+            console.log(file);
+        }
+    })
 })
